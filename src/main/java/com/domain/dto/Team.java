@@ -1,6 +1,6 @@
 package com.domain.dto;
 
-import com.exceptions.IncorrectScoreValue;
+import com.exceptions.IncorrectScoreValueException;
 
 public class Team implements Cloneable {
 
@@ -21,7 +21,7 @@ public class Team implements Cloneable {
 
     public void setScore(int score) {
         if (score < 0) {
-            throw new IncorrectScoreValue();
+            throw new IncorrectScoreValueException();
         }
         this.score = score;
     }
